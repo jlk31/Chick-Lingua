@@ -3,16 +3,36 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Background from './components/Background/Background';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import image4 from './assets/image4.png'
+import image5 from './assets/image5.png'
+import image6 from './assets/image6.png'
+import image7 from './assets/image7.png'
 
 const About = () => (
-  <div className="about-background">
-    <div style={{ fontWeight: 'bold', marginBottom: '24px' }}>A bit about us</div>
-    <div style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', color: 'white', lineHeight: '1.6' }}>
-      ChickLingua was created with the user's heart in mind - our goal is to scratch the stereotype that learning a new language is a chore
-      and instead make it an engaging and enjoyable experience.
-      ChickLingua was primarily designed for students who are studying for a German qualification at the KS4 level,
-      but it can also be used by anyone wishing to learn German in their free time too! 
+  <div className="about-visual-section">
+    <h1 className="about-visual-heading">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit, incidunt veritatis ab excepturi nobis, cupiditate quos perspiciatis sequi, possimus fuga impedit quas similique at officia sapiente. Aperiam, exercitationem non.
+    </h1>
+    <div className="about-visual-row">
+      <div className="about-visual-box">
+        <img src="/icon1.svg" alt="" className="about-visual-img" />
+      </div>
+      <div className="about-visual-box">
+        <img src={image4} alt="" className="about-visual-img" />
+      </div>
+      <div className="about-visual-box">
+        <img src={image5} alt="" className="about-visual-img" />
+      </div>
+      <div className="about-visual-box dark">
+        <img src={image6} alt="" className="about-visual-img" />
+      </div>
+      <div className="about-visual-box">
+        <img src={image7} alt="" className="about-visual-img" />
+      </div>
     </div>
+    <p className="about-visual-description">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at voluptatibus ab debitis consectetur quis a quidem perspiciatis doloribus, vero explicabo, fugit cupiditate in dolorum cumque accusantium facilis dolores eos.
+    </p>
   </div>
 );
 
