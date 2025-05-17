@@ -19,7 +19,7 @@ const About = () => (
 const Resources = () => (
   <div className="about-background">
     <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px' }}>
-      Free resources <span style={{ fontWeight: 'normal', color: 'white' }}>to that you can use to master German</span>
+      Free resources <span style={{ fontWeight: 'normal', color: 'white' }}>to that you can use to be on the track to mastering German</span>
     </h2>
     <div className="resource-row">
       <div className="resource-box">
@@ -34,7 +34,7 @@ const Resources = () => (
       </div>
     </div>
     <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px', marginTop: '60px' }}>
-      Additional Resources <span style={{ fontWeight: 'normal', color: 'white' }}>to boost your grades.</span>
+      Stronger resources <span style={{ fontWeight: 'normal', color: 'white' }}>that will help you nail your exam technique</span>
     </h2>
     <div className="resource-row">
       <div className="resource-box">
