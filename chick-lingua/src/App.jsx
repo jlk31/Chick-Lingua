@@ -18,8 +18,8 @@ const About = () => (
 
 const Resources = () => (
   <div className="about-background">
-    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px' }}>
-      Free resources <span style={{ fontWeight: 'normal', color: 'white' }}>to that you can use to be on the track to mastering German</span>
+    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'center' }}>
+      Free resources <span style={{ fontWeight: 'normal', color: 'white' }}>to use throughout your revision.</span>
     </h2>
     <div className="resource-row">
       <div className="resource-box">
@@ -33,7 +33,7 @@ const Resources = () => (
         <div className="resource-link">Free usage →</div>
       </div>
     </div>
-    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px', marginTop: '60px' }}>
+    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'center', marginTop: '60px' }}>
       Stronger resources <span style={{ fontWeight: 'normal', color: 'white' }}>that will help you nail your exam technique</span>
     </h2>
     <div className="resource-row">
@@ -47,6 +47,17 @@ const Resources = () => (
         <div className="resource-desc">Exam-style questions</div>
         <div className="resource-link"> For £13.50 →</div>
       </div>
+    </div>
+  </div>
+);
+
+const Quiz = () => (
+  <div className="about-background">
+    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'center' }}>
+      Quiz
+    </h2>
+    <div style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', color: 'white', lineHeight: '1.6' }}>
+      WIP
     </div>
   </div>
 );
@@ -88,6 +99,7 @@ const App = () => {
         />
         <Route path="/about" element={<About />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/quiz" element={<Quiz />} />
       </Routes>
     </Router>
   );
