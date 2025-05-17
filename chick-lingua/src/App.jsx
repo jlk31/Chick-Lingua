@@ -18,10 +18,38 @@ const About = () => (
 
 const Resources = () => (
   <div className="about-background">
-    <div style={{ fontWeight: 'bold', marginBottom: '24px' }}>Resources</div>
-    <div style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', color: 'white', lineHeight: '1.6' }}>
-      {/* Add your resources content here */}
-      This is the Resources page.
+    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px' }}>
+      Free Downloads <span style={{ fontWeight: 'normal', color: '#888' }}>to use throughout your revision.</span>
+    </h2>
+    <div className="resource-row">
+      <div className="resource-box">
+        <div className="resource-label free"></div>
+        <div className="resource-title">AQA Specification</div>
+        <div className="resource-desc">Use to understand what the examiners want</div>
+        <div className="resource-link">Free viewing →</div>
+      </div>
+      <div className="resource-box">
+        <div className="resource-label free"></div>
+        <div className="resource-title">Sample assessment materials</div>
+        <div className="resource-desc">Directly from AQA</div>
+        <div className="resource-link">Free usage →</div>
+      </div>
+    </div>
+    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px', marginTop: '60px' }}>
+      Additional Resources <span style={{ fontWeight: 'normal', color: '#888' }}>to boost your grades.</span>
+    </h2>
+    <div className="resource-row">
+      <div className="resource-box">
+        <div className="resource-title">Exam Practice Papers</div>
+        <div className="resource-desc">Get a sense of what the exam will be like</div>
+        <div className="resource-link">View now →</div>
+      </div>
+      <div className="resource-box">
+        <div className="resource-label amazon">PAID RESOURCE</div>
+        <div className="resource-title">Study notes</div>
+        <div className="resource-desc">Exam-style questions</div>
+        <div className="resource-link"> On Amazon for £13.50 →</div>
+      </div>
     </div>
   </div>
 );
