@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Background from './components/Background/Background';
 import image1 from './assets/image1.png'
 import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
 
 const App = () => {
   let heroData = [
@@ -16,11 +17,11 @@ const App = () => {
     <div>
       <Navbar/>
       <Hero
-        setPlayStatus={setPlayStatus}
-        heroData={heroData[heroCount]}
-        heroCount={heroCount}
-        setHeroCount={setHeroCount}
-        playStatus={playStatus}
+      setPlayStatus={setPlayStatus}
+      heroData={heroData[heroCount]}
+      heroCount={heroCount}
+      setHeroCount={setHeroCount}
+      playStatus={playStatus}
       />
       <Background playStatus={playStatus} heroCount={heroCount} />
       <div style={{ position: 'relative', zIndex: 2, color: 'white', marginLeft: '40px', marginTop: '100px', fontFamily: 'Poppins, sans-serif' }}>
