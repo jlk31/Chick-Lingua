@@ -7,6 +7,7 @@ import image4 from './assets/image4.png'
 import image5 from './assets/image5.png'
 import image6 from './assets/image6.png'
 import image7 from './assets/image7.png'
+import image8 from './assets/image8.png'
 
 const About = () => (
   <div className="about-visual-section">
@@ -15,19 +16,19 @@ const About = () => (
     </h1>
     <div className="about-visual-row">
       <div className="about-visual-box">
-        <img src="/icon1.svg" alt="" className="about-visual-img" />
-      </div>
-      <div className="about-visual-box">
         <img src={image4} alt="" className="about-visual-img" />
       </div>
       <div className="about-visual-box">
         <img src={image5} alt="" className="about-visual-img" />
       </div>
-      <div className="about-visual-box dark">
+      <div className="about-visual-box">
         <img src={image6} alt="" className="about-visual-img" />
       </div>
-      <div className="about-visual-box">
+      <div className="about-visual-box dark">
         <img src={image7} alt="" className="about-visual-img" />
+      </div>
+      <div className="about-visual-box">
+        <img src={image8} alt="" className="about-visual-img" />
       </div>
     </div>
     <p className="about-visual-description">
@@ -103,11 +104,15 @@ const Quiz = () => {
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
+  const [selected, setSelected] = useState(null);
 
-  const handleAnswer = (idx) => {
-    if (idx === quizQuestions[current].answer) {
+  const handleOptionClick = (idx) => setSelected(idx);
+
+  const handleSubmit = () => {
+    if (selected === quizQuestions[current].answer) {
       setScore(score + 1);
     }
+    setSelected(null);
     if (current < quizQuestions.length - 1) {
       setCurrent(current + 1);
     } else {
@@ -116,44 +121,42 @@ const Quiz = () => {
   };
 
   return (
-    <div className="about-background">
-      <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'center' }}>
-        Quiz
-      </h2>
-      <div style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', color: 'white', lineHeight: '1.6' }}>
-        {showScore ? (
-          <div>
-            <h3>Your score: {score} / {quizQuestions.length}</h3>
+    <div className="quiz-card">
+      {showScore ? (
+        <div className="quiz-center">
+          <h3>Your score: {score} / {quizQuestions.length}</h3>
+        </div>
+      ) : (
+        <>
+          <div className="quiz-progress">
+            {current + 1} of {quizQuestions.length}
           </div>
-        ) : (
-          <div>
-            <div style={{ marginBottom: '16px' }}>
-              <strong>Question {current + 1}:</strong> {quizQuestions[current].question}
-            </div>
-            <div>
-              {quizQuestions[current].options.map((option, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => handleAnswer(idx)}
-                  style={{
-                    display: 'block',
-                    margin: '8px 0',
-                    padding: '10px 20px',
-                    borderRadius: '8px',
-                    border: 'none',
-                    background: '#89CFF0',
-                    color: '#222',
-                    fontWeight: 'bold',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
+          <div className="quiz-question">
+            {quizQuestions[current].question}
           </div>
-        )}
-      </div>
+          <div className="quiz-options">
+            {quizQuestions[current].options.map((option, idx) => (
+              <button
+                key={idx}
+                className={`quiz-option-btn${selected === idx ? ' selected' : ''}`}
+                onClick={() => handleOptionClick(idx)}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
+          <button
+            className="quiz-submit-btn"
+            onClick={handleSubmit}
+            disabled={selected === null}
+          >
+            Submit
+          </button>
+          <div className="quiz-score">
+            {score} / {quizQuestions.length}
+          </div>
+        </>
+      )}
     </div>
   );
 };
