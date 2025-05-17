@@ -22,8 +22,8 @@ const Hero = ({heroData, setHeroCount, heroCount, setPlayStatus, playStatus}) =>
           <li onClick={()=>setHeroCount(2)} className={heroCount === 2?'hero-dot orange': 'hero-dot'}></li>
         </ul>
         <div className="hero-play">
-          <img src="" alt="" />
-          <p></p>
+          <img onClick={()=>setPlayStatus(!playStatus)} src={playStatus?pause_icon:play_icon} alt="" />
+          <p>Ready to embark on your learning journey?</p>
         </div>
       </div>
     </div>
