@@ -19,24 +19,22 @@ const About = () => (
 const Resources = () => (
   <div className="about-background">
     <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px' }}>
-      Free Downloads <span style={{ fontWeight: 'normal', color: '#888' }}>to use throughout your revision.</span>
+      Free resources <span style={{ fontWeight: 'normal', color: 'white' }}>to that you can use to master German</span>
     </h2>
     <div className="resource-row">
       <div className="resource-box">
-        <div className="resource-label free"></div>
         <div className="resource-title">AQA Specification</div>
         <div className="resource-desc">Use to understand what the examiners want</div>
         <div className="resource-link">Free viewing →</div>
       </div>
       <div className="resource-box">
-        <div className="resource-label free"></div>
         <div className="resource-title">Sample assessment materials</div>
         <div className="resource-desc">Directly from AQA</div>
         <div className="resource-link">Free usage →</div>
       </div>
     </div>
     <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'left', marginLeft: '40px', marginTop: '60px' }}>
-      Additional Resources <span style={{ fontWeight: 'normal', color: '#888' }}>to boost your grades.</span>
+      Additional Resources <span style={{ fontWeight: 'normal', color: 'white' }}>to boost your grades.</span>
     </h2>
     <div className="resource-row">
       <div className="resource-box">
@@ -45,10 +43,9 @@ const Resources = () => (
         <div className="resource-link">View now →</div>
       </div>
       <div className="resource-box">
-        <div className="resource-label amazon">PAID RESOURCE</div>
-        <div className="resource-title">Study notes</div>
+        <div className="resource-title">CGP textbook</div>
         <div className="resource-desc">Exam-style questions</div>
-        <div className="resource-link"> On Amazon for £13.50 →</div>
+        <div className="resource-link"> For £13.50 →</div>
       </div>
     </div>
   </div>
