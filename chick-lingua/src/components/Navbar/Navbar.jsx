@@ -11,7 +11,9 @@ const Navbar = () => (
       <li>
         <Link to="/about" style={{ color: 'inherit', textDecoration: 'none' }}>About</Link>
       </li>
-      <li>Resources</li>
+      <li>
+        <Link to="/resources" style={{ color: 'inherit', textDecoration: 'none' }}>Resources</Link>
+      </li>
       <li className='nav-contact'>Quiz</li>
     </ul>
   </div>
