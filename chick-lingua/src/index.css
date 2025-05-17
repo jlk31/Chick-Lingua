@@ -1,13 +1,13 @@
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
   background: linear-gradient(135deg, #89CFF0 0%, white 100%);
 }
 
 .about-background {
   min-height: 100vh;
-  background: linear-gradient(135deg, #89CFF0 0%, white 100%);
   color: white;
   font-size: 2rem;
   text-align: center;
