@@ -51,16 +51,92 @@ const Resources = () => (
   </div>
 );
 
-const Quiz = () => (
-  <div className="about-background">
-    <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'center' }}>
-      Quiz
-    </h2>
-    <div style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', color: 'white', lineHeight: '1.6' }}>
-      WIP
+const quizQuestions = [
+  {
+    question: "What is the German word for 'apple'?",
+    options: ["Apfel", "Banane", "Orange", "Traube"],
+    answer: 0,
+  },
+  {
+    question: "How do you say 'thank you' in German?",
+    options: ["Bitte", "Danke", "Hallo", "Tschüss"],
+    answer: 1,
+  },
+  {
+    question: "What is the German word for 'school'?",
+    options: ["Haus", "Schule", "Auto", "Buch"],
+    answer: 1,
+  },
+  {
+    question: "How do you say 'good night' in German?",
+    options: ["Guten Morgen", "Gute Nacht", "Guten Tag", "Guten Abend"],
+    answer: 1,
+  },
+  {
+    question: "What is the German word for 'book'?",
+    options: ["Stuhl", "Tisch", "Buch", "Fenster"],
+    answer: 2,
+  },
+];
+
+const Quiz = () => {
+  const [current, setCurrent] = useState(0);
+  const [score, setScore] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+
+  const handleAnswer = (idx) => {
+    if (idx === quizQuestions[current].answer) {
+      setScore(score + 1);
+    }
+    if (current < quizQuestions.length - 1) {
+      setCurrent(current + 1);
+    } else {
+      setShowScore(true);
+    }
+  };
+
+  return (
+    <div className="about-background">
+      <h2 style={{ fontWeight: 'bold', marginBottom: '24px', textAlign: 'center' }}>
+        Quiz
+      </h2>
+      <div style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', color: 'white', lineHeight: '1.6' }}>
+        {showScore ? (
+          <div>
+            <h3>Your score: {score} / {quizQuestions.length}</h3>
+          </div>
+        ) : (
+          <div>
+            <div style={{ marginBottom: '16px' }}>
+              <strong>Question {current + 1}:</strong> {quizQuestions[current].question}
+            </div>
+            <div>
+              {quizQuestions[current].options.map((option, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleAnswer(idx)}
+                  style={{
+                    display: 'block',
+                    margin: '8px 0',
+                    padding: '10px 20px',
+                    borderRadius: '8px',
+                    border: 'none',
+                    background: '#89CFF0',
+                    color: '#222',
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const App = () => {
   const heroData = [
