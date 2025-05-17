@@ -5,7 +5,11 @@ import image1 from './assets/image1.png'
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 
-const About = () => <div style={{ color: 'white', fontSize: '2rem', textAlign: 'center', marginTop: '100px' }}>About Page</div>;
+const About = () => (
+  <div className="about-background">
+    About Page
+  </div>
+);
 
 const App = () => {
   let heroData = [
