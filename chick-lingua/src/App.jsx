@@ -24,10 +24,6 @@ const App = () => {
       playStatus={playStatus}
       />
       <Background playStatus={playStatus} heroCount={heroCount} />
-      <div style={{ position: 'relative', zIndex: 2, color: 'white', marginLeft: '40px', marginTop: '100px', fontFamily: 'Poppins, sans-serif' }}>
-        <h1>{heroData[heroCount].text1}</h1>
-        <h2>{heroData[heroCount].text2}</h2>
-      </div>
     </div>
   );
 };

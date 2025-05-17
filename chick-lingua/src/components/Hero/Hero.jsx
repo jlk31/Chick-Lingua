@@ -6,6 +6,10 @@ import pause_icon from '../../assets/pause_icon.png'
 const Hero = ({heroData, setHeroCount, heroCount, setPlayStatus, playStatus}) => {
   return (
     <div className='hero'>
+      <div className="hero-text">
+        <h1>{heroData.text1}</h1>
+        <h2>{heroData.text2}</h2>
+      </div>
       <img
       src={arrow_btn}
       alt=""
