@@ -1,7 +1,31 @@
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 40px 120px;
-    color: white;
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.nav-logo {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px; /* Move menu 20px to the left */
+}
+
+.nav-menu li {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
 }

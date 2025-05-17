@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Background from './components/Background/Background';
 import image1 from './assets/image1.png'
+import Navbar from './components/Navbar/Navbar';
 
 const App = () => {
   const [playStatus, setPlayStatus] = useState(true);
@@ -8,8 +9,8 @@ const App = () => {
 
   return (
     <div>
+      <Navbar/>
       <Background playStatus={playStatus} heroCount={heroCount} />
-      <h1 className="chicklingua-title">ChickLingua</h1>
     </div>
   );
 };
