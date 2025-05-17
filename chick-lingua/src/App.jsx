@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import Background from './components/Background/Background';
+
 const App = () => {
   let heroData = [
     {text1:"Master German", text2:"the fun way"},
