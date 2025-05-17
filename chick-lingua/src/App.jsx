@@ -3,37 +3,34 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Background from './components/Background/Background';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
-import image4 from './assets/image4.png'
-import image5 from './assets/image5.png'
-import image6 from './assets/image6.png'
-import image7 from './assets/image7.png'
-import image8 from './assets/image8.png'
 
 const About = () => (
-  <div className="about-visual-section">
-    <h1 className="about-visual-heading">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sit, incidunt veritatis ab excepturi nobis, cupiditate quos perspiciatis sequi, possimus fuga impedit quas similique at officia sapiente. Aperiam, exercitationem non.
-    </h1>
-    <div className="about-visual-row">
-      <div className="about-visual-box">
-        <img src={image4} alt="" className="about-visual-img" />
+  <div className="about-feature-section">
+    <img
+      src="./assets/image4.png"
+      alt="About visual"
+      className="about-feature-image"
+    />
+    <div className="about-feature-row">
+      <div className="about-feature-col">
+        <h3>Simplicity in Design</h3>
+        <p>
+          No flashy logos. No senseless details. Just the world’s most comfortable resources, made naturally and designed practically. It’s that simple.
+        </p>
       </div>
-      <div className="about-visual-box">
-        <img src={image5} alt="" className="about-visual-img" />
+      <div className="about-feature-col">
+        <h3>Confidence in Comfort</h3>
+        <p>
+          Trying is believing. Use our platform for 30 days, and if you’re not learning on cloud nine, we’ll take your feedback—no questions asked.
+        </p>
       </div>
-      <div className="about-visual-box">
-        <img src={image6} alt="" className="about-visual-img" />
-      </div>
-      <div className="about-visual-box dark">
-        <img src={image7} alt="" className="about-visual-img" />
-      </div>
-      <div className="about-visual-box">
-        <img src={image8} alt="" className="about-visual-img" />
+      <div className="about-feature-col">
+        <h3>Made from Nature</h3>
+        <p>
+          We use nature-inspired methods and materials to help you learn better, avoiding synthetic, ineffective alternatives. We think it’s time to change that.
+        </p>
       </div>
     </div>
-    <p className="about-visual-description">
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis at voluptatibus ab debitis consectetur quis a quidem perspiciatis doloribus, vero explicabo, fugit cupiditate in dolorum cumque accusantium facilis dolores eos.
-    </p>
   </div>
 );
 
