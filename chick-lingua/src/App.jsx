@@ -7,11 +7,12 @@ const App = () => {
     {text1:"Turn German", text2:"into a game"},
     {text1:"Language learning", text2:"that doesnt feel like homework"},
   ]
-  const [heroCount, setHeroCount] = useState(0);
+  const [heroCount, setHeroCount] = useState(2);
   const [playStatus, setPlayStatus] = useState(false);
   return (
     <div>
       <Background playStatus={playStatus} heroCount={heroCount}/>
+      <Navbar/>
     </div>
   )
 }
