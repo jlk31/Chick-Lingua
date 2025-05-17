@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Background from './components/Background/Background';
 import image1 from './assets/image1.png'
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+
+const About = () => <div style={{ color: 'white', fontSize: '2rem', textAlign: 'center', marginTop: '100px' }}>About Page</div>;
 
 const App = () => {
   let heroData = [
@@ -22,17 +25,27 @@ const App = () => {
   const [heroCount, setHeroCount] = useState(0);
 
   return (
-    <div>
-      <Navbar/>
-      <Hero
-      setPlayStatus={setPlayStatus}
-      heroData={heroData[heroCount]}
-      heroCount={heroCount}
-      setHeroCount={setHeroCount}
-      playStatus={playStatus}
-      />
-      <Background playStatus={playStatus} heroCount={heroCount} />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero
+                setPlayStatus={setPlayStatus}
+                heroData={heroData[heroCount]}
+                heroCount={heroCount}
+                setHeroCount={setHeroCount}
+                playStatus={playStatus}
+              />
+              <Background playStatus={playStatus} heroCount={heroCount} />
+            </>
+          }
+        />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 };
 
