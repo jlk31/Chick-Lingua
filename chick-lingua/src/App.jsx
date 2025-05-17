@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Background from './components/Background/Background';
 import image1 from './assets/image1.png'
 import Navbar from './components/Navbar/Navbar';
@@ -11,6 +11,14 @@ const App = () => {
     {text1:"Language learning", text2:"that doesnt feel like homework"},
   ]
   const [playStatus, setPlayStatus] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroCount((count) => (count === 2 ? 0 : count + 1));
+    }, 2000);
+    return () => clearInterval(interval);
+}, []);
+
   const [heroCount, setHeroCount] = useState(0);
 
   return (
