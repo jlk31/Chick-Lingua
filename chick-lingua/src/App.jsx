@@ -15,6 +15,13 @@ const App = () => {
   return (
     <div>
       <Navbar/>
+      <Hero
+        setPlayStatus={setPlayStatus}
+        heroData={heroData[heroCount]}
+        heroCount={heroCount}
+        setHeroCount={setHeroCount}
+        playStatus={playStatus}
+      />
       <Background playStatus={playStatus} heroCount={heroCount} />
       <div style={{ position: 'relative', zIndex: 2, color: 'white', marginLeft: '40px', marginTop: '100px', fontFamily: 'Poppins, sans-serif' }}>
         <h1>{heroData[heroCount].text1}</h1>
