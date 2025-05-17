@@ -7,7 +7,13 @@ import Hero from './components/Hero/Hero';
 
 const About = () => (
   <div className="about-background">
-    About Page
+    <div style={{ fontWeight: 'bold', marginBottom: '24px' }}>A bit about us</div>
+    <div style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.2rem', color: 'white', lineHeight: '1.6' }}>
+      ChickLingua was created with the user's heart in mind - our goal is to scratch the stereotype that learning a new language is a chore
+      and instead make it an engaging and enjoyable experience.
+      ChickLingua was primarily designed for students who are studying for a German qualification at the KS4 level,
+      but it can also be used by anyone wishing to learn German in their free time too! 
+      </div>
   </div>
 );
 
