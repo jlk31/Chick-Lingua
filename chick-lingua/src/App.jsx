@@ -53,28 +53,28 @@ const Resources = () => (
 
 const quizQuestions = [
   {
-    question: "What is the German word for 'apple'?",
-    options: ["Apfel", "Banane", "Orange", "Traube"],
+    question: "What is the German word for 'traffic light?'?",
+    options: ["Die ampel", "Anbieten", "Das Angebot", "Traube"],
     answer: 0,
   },
   {
-    question: "How do you say 'thank you' in German?",
-    options: ["Bitte", "Danke", "Hallo", "Tschüss"],
+    question: "What is 'to try on clothes' in German?",
+    options: ["Bitte", "Anprobieren", "Abend", "Tschüss"],
     answer: 1,
   },
   {
-    question: "What is the German word for 'school'?",
-    options: ["Haus", "Schule", "Auto", "Buch"],
+    question: "What is the German word for 'apparatus/appliance/gadget'?",
+    options: ["Haus", "Der Apparat", "Auto", "Buch"],
     answer: 1,
   },
   {
-    question: "How do you say 'good night' in German?",
-    options: ["Guten Morgen", "Gute Nacht", "Guten Tag", "Guten Abend"],
+    question: "What is 'to tidy up' in German?",
+    options: ["Guten Morgen", "Aufräumen", "Guten Tag", "Guten Abend"],
     answer: 1,
   },
   {
-    question: "What is the German word for 'book'?",
-    options: ["Stuhl", "Tisch", "Buch", "Fenster"],
+    question: "What is German for 'to spend money'?",
+    options: ["Stuhl", "Tisch", "Ausgeben", "Fenster"],
     answer: 2,
   },
 ];
