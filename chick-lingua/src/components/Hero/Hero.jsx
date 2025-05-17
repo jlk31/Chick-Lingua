@@ -18,6 +18,12 @@ const Hero = ({heroData, setHeroCount, heroCount, setPlayStatus, playStatus}) =>
       />
       <div className="hero-explore">
         <p>Explore the features</p>
+        <img
+        className="hero-explore-arrow"
+        src={arrow_btn}
+        alt=""
+        onClick={() => setHeroCount((prev) => (prev + 1) % 3)}
+        />
       </div>
       <div className="hero-play">
         <ul className="hero-dots">
