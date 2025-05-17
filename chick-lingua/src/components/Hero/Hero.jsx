@@ -10,6 +10,12 @@ const Hero = ({heroData, setHeroCount, heroCount, setPlayStatus, playStatus}) =>
         <p>{heroData.text1}</p>
         <p>{heroData.text2}</p>
       </div>
+      <img
+      src={arrow_btn}
+      alt=""
+      onClick={() => setHeroCount((prev) => (prev + 1) % 3)}
+      style={{ cursor: 'pointer' }}
+      />
       <div className="hero-explore">
         <p>Explore the features</p>
         <img src={arrow_btn} alt="" />

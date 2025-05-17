@@ -10,7 +10,7 @@ const App = () => {
     {text1:"Turn German", text2:"into a game"},
     {text1:"Language learning", text2:"that doesnt feel like homework"},
   ]
-  const [playStatus, setPlayStatus] = useState(true);
+  const [playStatus, setPlayStatus] = useState(false);
   const [heroCount, setHeroCount] = useState(0);
 
   return (
