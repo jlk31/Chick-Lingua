@@ -3,31 +3,32 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Background from './components/Background/Background';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import image4 from './assets/image4.png'
 
 const About = () => (
   <div className="about-feature-section">
     <img
-      src="./assets/image4.png"
+      src={image4}
       alt="About visual"
       className="about-feature-image"
     />
     <div className="about-feature-row">
       <div className="about-feature-col">
-        <h3>Simplicity in Design</h3>
+        <h3>Confidence in learning</h3>
         <p>
-          No flashy logos. No senseless details. Just the world’s most comfortable resources, made naturally and designed practically. It’s that simple.
+          We want our users to feel as confident and content as they can be when learning with us. No flashy games. As simple as that.
         </p>
       </div>
       <div className="about-feature-col">
-        <h3>Confidence in Comfort</h3>
+        <h3>No matter the skill level</h3>
         <p>
-          Trying is believing. Use our platform for 30 days, and if you’re not learning on cloud nine, we’ll take your feedback—no questions asked.
+          Whether you're simply a novice or a seasoned pro, our aim is to make your learning simple and stress-free. 
         </p>
       </div>
       <div className="about-feature-col">
-        <h3>Made from Nature</h3>
+        <h3>Accessibility for all</h3>
         <p>
-          We use nature-inspired methods and materials to help you learn better, avoiding synthetic, ineffective alternatives. We think it’s time to change that.
+          We're passionate about our methods of education and are committed to giving you the best experience possible, along with making sure anyone can access our resources.
         </p>
       </div>
     </div>
